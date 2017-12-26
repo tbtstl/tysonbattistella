@@ -16,7 +16,7 @@ import {
 import Projects from 'components/projects';
 import Learning from 'components/learning';
 
-import 'app.css';
+import './app.css';
 
 
 class App extends Component {
