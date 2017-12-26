@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import request from 'superagent';
+import styled from 'styled-components';
 
 import {
   Provider,
@@ -8,7 +9,8 @@ import {
   Divider,
   Flex,
   Container,
-  Box
+  Box,
+  Text
 } from 'rebass';
 
 import Projects from 'components/projects';
@@ -45,6 +47,15 @@ class App extends Component {
 
   render() {
     const {work, learning, color, hoverColor} = this.state;
+
+    const ContactLink = styled('a')`
+      text-decoration: none;
+      color: ${color};
+      :hover {
+        color: ${hoverColor};
+      }
+    `;
+
     return (
       <Provider>
         <Container>
@@ -57,6 +68,20 @@ class App extends Component {
               residing on the south end of a small island on the west side
               of a large country in the north.
             </Label>
+            <Box width={1} mt={3}>
+              <Text color={color}>
+                <ContactLink href="mailto:tysonbattistella@gmail.com">
+                  <span className="fa fa-envelope-o"/> tysonbattistella@gmail.com
+                </ContactLink>
+              </Text>
+            </Box>
+            <Box width={1}>
+              <Text color={color}>
+                <ContactLink href="https://twitter.com/tbtstl">
+                  <span className="fa fa-twitter"/> @tbtstl
+                </ContactLink>
+              </Text>
+            </Box>
           </Box>
           <Box width={1}>
             <Projects projects={work} color={color} hoverColor={hoverColor}/>

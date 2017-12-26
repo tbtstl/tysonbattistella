@@ -28,7 +28,7 @@ export default class ProjectItem extends React.Component {
 
         return (
             <InlineBox width={[1, 1/2, 1/3, 1/4]} m={1} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-            <a href={link || '#'} style={{textDecoration: 'none', color}}>
+            <a href={link || '#'} style={{textDecoration: 'none', color}} target="_blank">
                 <HoverPanel color={color}>
                     <Box p={2}>
                         <Subhead f={3}>{title}{offline && <Small> (offline)</Small>}</Subhead>
