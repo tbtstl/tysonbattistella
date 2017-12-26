@@ -1,0 +1,24 @@
+[
+  {
+    "title": "The Visual Space",
+    "description": "A collection of web experiments built using React and P5JS.",
+    "link": "http://thevisual.space"
+  }, {
+    "title": "Telmediq",
+    "description": "A HIPAA compliant healthcare communications hub operating out of Victoria, British Columbia.",
+    "link": "https://www.telmediq.com"
+  }, {
+    "title": "SD&ML",
+    "description": "A community of students and software enthusiasts interested in using the latest technologies and techniques to build innovative things. Every week, members listen to and share talks about a topic they are passionate about. Newcomers are always welcome.",
+    "link": "http://sdaml.club"
+  }, {
+    "title": "Picmoji",
+    "description": "A ridiculously simple Django application that converts images into emoji mosaics.",
+    "link": "https://picmoji.tysonbattistella.com"
+  }, {
+    "title": "The Wishlist",
+    "description": "A MeteorJS application that serves as an online gift registry for holidays and events.",
+    "link": "http://thewishlist.xyz",
+    "offline": true
+  }
+]

@@ -24,9 +24,14 @@ def robots():
     return 'aaaaa'
 
 
-@app.route('/test')
-def test():
-    return 'tst'
+@app.route('/api/work/')
+def serve_work():
+    return send_from_directory('data', 'work.json')
+
+
+@app.route('/api/learning/')
+def serve_learning():
+    return send_from_directory('data', 'learning.json')
 
 
 @app.route('/<path:path>')

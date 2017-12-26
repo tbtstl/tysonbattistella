@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Panel, PanelFooter, PanelHeader} from 'rebass';
+import {Panel} from 'rebass';
 
 export default class HoverPanel extends React.PureComponent {
     render(){
@@ -9,7 +9,7 @@ export default class HoverPanel extends React.PureComponent {
             border: 0;
             box-sizing: border-box;
             // Using inset box-shadow instead of border for sizing simplicity
-            box-shadow: inset 0 0 0 2px $red;
+            box-shadow: inset 0 0 0 1px white;
             font-size: inherit;
             font-weight: 700;
             // Required, since we're setting absolute on pseudo-elements
@@ -25,24 +25,11 @@ export default class HoverPanel extends React.PureComponent {
               height: 100%;
             }
             transition: all 0.25s ease;
-            &:hover {
-                color: purple;
-            }
-            
-            // Set up base styles, we're going to scale instead of animating width/height
-            &::before,
-            &::after {
-              top: 0;
-              left: 0;
-              height: 100%;
-              width: 100%;
-              transform-origin: center; // Ensure scaling is done from the center (expands outwards)
-            }
-        
+
             &::before,
             &::after {
               // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
-              border: 2px solid transparent;
+              border: 1px solid transparent;
               width: 0;
               height: 0;
             }
@@ -86,15 +73,6 @@ export default class HoverPanel extends React.PureComponent {
                 width 0.25s ease-out 0.5s, // And then exanding width
                 height 0.25s ease-out 0.75s; // And finally height
             }
-              // ${PanelFooter} {
-              //     border-top: 1px rgba(0,0,0,0);
-              // }
-              // &:hover ${PanelFooter} {
-              //     border-top: 1px solid ${props => props.color || 'black'};
-              // }
-              // &:hover {
-              //     border: 1px solid ${props => props.color || 'black'};
-              // }
             `;
         return (
             <HP {...props}/>

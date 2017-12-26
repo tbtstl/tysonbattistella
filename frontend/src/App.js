@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import request from 'superagent';
 
 import {
   Provider,
@@ -19,6 +20,31 @@ import 'app.css';
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      work: [],
+      learning: [],
+      contact: [],
+    }
+  }
+
+  componentWillMount(){
+    request
+        .get('/api/work/')
+        .end((err, res) => {
+          console.log(err);
+          console.log(res)
+          this.setState({...this.state, work: res.body})
+        });
+
+    request
+        .get('/api/learning/')
+        .end((err, res) => {
+          this.setState({...this.state, learning: res.body})
+        });
+  }
+
   render() {
     return (
       <Provider>
