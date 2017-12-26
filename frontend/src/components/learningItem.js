@@ -27,8 +27,8 @@ export default class LearningItem extends React.PureComponent {
         const {color} = this.state;
 
         return (
-            <InlineBox width={[1/2, 1/2, 1/2, 1/3]} m={1} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-                <HoverPanel color={color}>
+            <InlineBox width={[1/2, 1/2, 1/2, 1/3]} m={1}>
+                <HoverPanel color={color} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                     <Box p={2}>
                         <Subhead color={color} f={2}>{title}</Subhead>
                     </Box>

@@ -27,9 +27,9 @@ export default class ProjectItem extends React.Component {
         const {color} = this.state;
 
         return (
-            <InlineBox width={[1, 1/2, 1/3, 1/4]} m={1} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+            <InlineBox width={[1, 1/2, 1/3, 1/4]} m={1}>
             <a href={link || '#'} style={{textDecoration: 'none', color}} target="_blank">
-                <HoverPanel color={color}>
+                <HoverPanel color={color} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                     <Box p={2}>
                         <Subhead f={3}>{title}{offline && <Small> (offline)</Small>}</Subhead>
                     </Box>
