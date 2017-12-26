@@ -21,7 +21,7 @@ def serve_static(path):
 
 @app.route('/robots.txt')
 def robots():
-    return 'aaaaa'
+    return send_from_directory('frontend/build', 'robots.txt')
 
 
 @app.route('/api/work/')
