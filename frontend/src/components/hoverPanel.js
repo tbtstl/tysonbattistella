@@ -4,7 +4,7 @@ import {Panel} from 'rebass';
 
 export default class HoverPanel extends React.PureComponent {
     render(){
-        const props = this.props;
+        const {color} = this.props;
         const HP = styled(Panel)`
             border: 0;
             box-sizing: border-box;
@@ -47,7 +47,7 @@ export default class HoverPanel extends React.PureComponent {
             }
             
             &:hover {
-              color: ${props => props.color || 'black'};
+              color: ${color};
             }
           
             // Hover styles
@@ -58,16 +58,16 @@ export default class HoverPanel extends React.PureComponent {
             }
           
             &:hover::before {
-              border-top-color: ${props => props.color || 'black'}; // Make borders visible
-              border-right-color: ${props => props.color || 'black'};
+              border-top-color: ${color}; // Make borders visible
+              border-right-color: ${color};
               transition:
                 width 0.25s ease-out, // Width expands first
                 height 0.25s ease-out 0.25s; // And then height
             }
           
             &:hover::after {
-              border-bottom-color: ${props => props.color || 'black'}; // Make borders visible
-              border-left-color: ${props => props.color || 'black'};
+              border-bottom-color: ${color}; // Make borders visible
+              border-left-color: ${color};
               transition:
                 border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
                 width 0.25s ease-out 0.5s, // And then exanding width
@@ -75,7 +75,7 @@ export default class HoverPanel extends React.PureComponent {
             }
             `;
         return (
-            <HP {...props}/>
+            <HP {...this.props}/>
         )
     }
 }

@@ -3,8 +3,8 @@ import {PanelFooter, Box, Small, Subhead, Text} from 'rebass';
 import InlineBox from 'components/inlineBox';
 import HoverPanel from 'components/hoverPanel';
 
-export default class ProjectItem extends React.Component {
-    constructor(props){
+export default class LearningItem extends React.PureComponent {
+     constructor(props){
         super(props);
 
         this.state = {
@@ -23,23 +23,21 @@ export default class ProjectItem extends React.Component {
     }
 
     render(){
-        const {title, description, link, offline} = this.props;
+        const {title, year, institution} = this.props;
         const {color} = this.state;
 
         return (
-            <InlineBox width={[1, 1/2, 1/3, 1/4]} m={1} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-            <a href={link || '#'} style={{textDecoration: 'none', color}}>
+            <InlineBox width={[1/2, 1/2, 1/2, 1/3]} m={1} onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                 <HoverPanel color={color}>
                     <Box p={2}>
-                        <Subhead f={3}>{title}{offline && <Small> (offline)</Small>}</Subhead>
+                        <Subhead color={color} f={2}>{title}</Subhead>
                     </Box>
                     <PanelFooter f={1} color={color}>
                         <Text>
-                        {description}
+                            <Small>({year})</Small> {institution}
                         </Text>
                     </PanelFooter>
                 </HoverPanel>
-            </a>
             </InlineBox>
         )
     }
