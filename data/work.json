@@ -1,5 +1,15 @@
 [
   {
+    "title": "Wine Classifier",
+    "description": "A simple K-Means classifier to cluster chemical attributes of wine as either red or white.",
+    "link": "https://github.com/tysonbattistella/red-or-white-wine/"
+  },
+  {
+    "title": "TV Script Generator",
+    "description": "An LSTM cell based recurrent neural network to generate transcripts of television shows.",
+    "link": "https://github.com/tysonbattistella/tv-script-generation"
+  },
+  {
     "title": "The Visual Space",
     "description": "A collection of web experiments built using React and P5JS.",
     "link": "http://thevisual.space"
@@ -10,7 +20,7 @@
   }, {
     "title": "SD&ML",
     "description": "A community of students and software enthusiasts interested in using the latest technologies and techniques to build innovative things. Every week, members listen to and share talks about a topic they are passionate about. Newcomers are always welcome.",
-    "link": "http://sdaml.club"
+    "link": "https://github.com/sdaml"
   }, {
     "title": "Picmoji",
     "description": "A ridiculously simple Django application that converts images into emoji mosaics.",
@@ -18,7 +28,7 @@
   }, {
     "title": "The Wishlist",
     "description": "A MeteorJS application that serves as an online gift registry for holidays and events.",
-    "link": "http://thewishlist.xyz",
+    "link": "https://github.com/puddllee/wishlist",
     "offline": true
   }
 ]
