@@ -46,32 +46,35 @@ export default class HoverPanel extends React.PureComponent {
               right: 0;
             }
             
-            &:hover {
-              color: ${color};
-            }
-          
-            // Hover styles
-            &:hover::before,
-            &:hover::after {
-              width: 100%;
-              height: 100%;
-            }
-          
-            &:hover::before {
-              border-top-color: ${color}; // Make borders visible
-              border-right-color: ${color};
-              transition:
-                width 0.25s ease-out, // Width expands first
-                height 0.25s ease-out 0.25s; // And then height
-            }
-          
-            &:hover::after {
-              border-bottom-color: ${color}; // Make borders visible
-              border-left-color: ${color};
-              transition:
-                border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
-                width 0.25s ease-out 0.5s, // And then exanding width
-                height 0.25s ease-out 0.75s; // And finally height
+            
+            @media (hover: hover) {
+                // Hover styles
+                &:hover {
+                  color: ${color};
+                }
+
+                &:hover::before,
+                &:hover::after {
+                  width: 100%;
+                  height: 100%;
+                }
+              
+                &:hover::before {
+                  border-top-color: ${color}; // Make borders visible
+                  border-right-color: ${color};
+                  transition:
+                    width 0.25s ease-out, // Width expands first
+                    height 0.25s ease-out 0.25s; // And then height
+                }
+              
+                &:hover::after {
+                  border-bottom-color: ${color}; // Make borders visible
+                  border-left-color: ${color};
+                  transition:
+                    border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+                    width 0.25s ease-out 0.5s, // And then exanding width
+                    height 0.25s ease-out 0.75s; // And finally height
+                }
             }
             `;
         return (
