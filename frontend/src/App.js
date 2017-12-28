@@ -61,7 +61,7 @@ class App extends Component {
         <Container>
         <Flex wrap mx={-2}>
           <Box width={2/3}>
-            <Heading is="h1" color={color} f={9}>Tyson<br/>Battistella</Heading>
+            <Heading is="h1" color={color} f={[6, 7, 9, 9]}>Tyson<br/>Battistella</Heading>
             <Divider color={color}/>
             <Label f={4} color={color}>
               A web developer and machine learning enthusiast currently
