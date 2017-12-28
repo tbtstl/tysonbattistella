@@ -75,6 +75,13 @@ class App extends Component {
                 </ContactLink>
               </Text>
             </Box>
+            <Box width={1} mt={3}>
+              <Text color={color}>
+                <ContactLink href="https://github.com/tysonbattistella">
+                  <span className="fa fa-github"/> tysonbattistella
+                </ContactLink>
+              </Text>
+            </Box>
             <Box width={1}>
               <Text color={color}>
                 <ContactLink href="https://twitter.com/tbtstl">
