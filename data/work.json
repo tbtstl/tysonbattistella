@@ -1,5 +1,20 @@
 [
   {
+    "title": "The Pixels .Club",
+    "description": "A public pixel canvas experiment built using Rails' ActionCable",
+    "link": "https://www.thepixels.club"
+  },
+  {
+    "title": "RPSM",
+    "description": "An implementation of the 'Recurrent 3D Pose Sequence Machines' paper by Mude Lin et. al in Tensorflow. This model can perform 3D human articulated pose recovery from monocular image sequences by learning to recurrently integrate rich spatio-temporal long-range dependencies in an implicit and comprehensive manner.",
+    "link": "https://github.com/andrewandrewxu/CSC486_Project/"
+  },
+  {
+    "title": "Kubera (In Progress)",
+    "description": "A crypto currency exchange for people who don't want to become financially committed. Kubera is a pseudo-exchange that allows anyone to create trading groups with their friends and coworkers. Each trading group has a leaderboard displaying who has traded most successfully among their peers. Built with React and Phoenix.",
+    "link": "https://kuberaexchange.com"
+  },
+  {
     "title": "Wine Classifier",
     "description": "A simple K-Means classifier to cluster chemical attributes of wine as either red or white.",
     "link": "https://github.com/tysonbattistella/red-or-white-wine/"
