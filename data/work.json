@@ -1,12 +1,12 @@
 [
   {
     "title": "Arxiver",
-    "description": "A simple way to search ArXiv articles",
+    "description": "A simple way to search ArXiv articles. Built with Rails, React, and Elasticsearch.",
     "link": "https://www.arxiver.xyz"
   },
   {
     "title": "The Pixels .Club",
-    "description": "A public pixel canvas experiment built using Rails' ActionCable",
+    "description": "A public pixel canvas experiment built using Rails' ActionCable and React. This application allows anyone to contribute to a public artboard by placing pixels on a canvas.",
     "link": "https://www.thepixels.club"
   },
   {
