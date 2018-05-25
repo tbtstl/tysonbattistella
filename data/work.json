@@ -1,5 +1,10 @@
 [
   {
+    "title": "Arxiver",
+    "description": "A simple way to search ArXiv articles",
+    "link": "https://www.arxiver.xyz"
+  },
+  {
     "title": "The Pixels .Club",
     "description": "A public pixel canvas experiment built using Rails' ActionCable",
     "link": "https://www.thepixels.club"

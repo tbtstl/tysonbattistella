@@ -65,8 +65,7 @@ class App extends Component {
             <Divider color={color}/>
             <Label f={4} color={color}>
               A web developer and machine learning enthusiast currently
-              residing on the south end of a small island on the west side
-              of a large country in the north.
+              residing in the Bay Area
             </Label>
             <Box width={1} mt={3}>
               <Text color={color}>
