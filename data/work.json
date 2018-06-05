@@ -1,5 +1,10 @@
 [
   {
+    "title": "Coinbase Commerce",
+    "description": "Coinbase Commerce is the easiest and safest way for your business to start accepting digital currency payments.",
+    "link": "https://commerce.coinbase.com/"
+  },
+  {
     "title": "Arxiver",
     "description": "A simple way to search ArXiv articles. Built with Rails, React, and Elasticsearch.",
     "link": "https://www.arxiver.xyz"
