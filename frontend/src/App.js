@@ -1,33 +1,26 @@
 import React, { Component } from 'react';
 import request from 'superagent';
-import styled from 'styled-components';
+import {injectGlobal} from 'styled-components';
 
 import {
-  Provider,
-  Heading,
-  Label,
-  Divider,
-  Flex,
-  Container,
-  Box,
-  Text
+  Provider
 } from 'rebass';
 
-import Projects from 'components/projects';
-import Learning from 'components/learning';
+import theme from './theme';
 
-import './app.css';
+import FullHeightSection from 'components/FullHeightSection'
+import Projects from 'components/projects';
+import BoxTitle from 'components/boxTitle';
+
+import InlineBox from "./components/inlineBox";
 
 
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      color: '#00449E',
-      hoverColor: '#D5008F',
       work: [],
-      learning: [],
-      contact: [],
+      contact: []
     }
   }
 
@@ -46,57 +39,42 @@ class App extends Component {
   }
 
   render() {
-    const {work, learning, color, hoverColor} = this.state;
+    const {work} = this.state;
 
-    const ContactLink = styled('a')`
-      text-decoration: none;
-      color: ${color};
-      :hover {
-        color: ${hoverColor};
+    injectGlobal`
+      body {
+        background-color: ${theme.colors.secondary};
+        color: ${theme.colors.primary};
+        margin: 0;
       }
     `;
 
     return (
-      <Provider>
-        <Container>
-        <Flex wrap mx={-2}>
-          <Box width={2/3}>
-            <Heading is="h1" color={color} f={[6, 7, 9, 9]}>Tyson<br/>Battistella</Heading>
-            <Divider color={color}/>
-            <Label f={4} color={color}>
-              A web developer and machine learning enthusiast currently
-              residing in the Bay Area
-            </Label>
-            <Box width={1} mt={3}>
-              <Text color={color}>
-                <ContactLink href="mailto:tysonbattistella@gmail.com">
-                  <span className="fa fa-envelope-o"/> tysonbattistella@gmail.com
-                </ContactLink>
-              </Text>
-            </Box>
-            <Box width={1}>
-              <Text color={color}>
-                <ContactLink href="https://github.com/tysonbattistella">
-                  <span className="fa fa-github"/> tysonbattistella
-                </ContactLink>
-              </Text>
-            </Box>
-            <Box width={1}>
-              <Text color={color}>
-                <ContactLink href="https://twitter.com/tbtstl">
-                  <span className="fa fa-twitter"/> @tbtstl
-                </ContactLink>
-              </Text>
-            </Box>
-          </Box>
-          <Box width={1}>
-            <Projects projects={work} color={color} hoverColor={hoverColor}/>
-          </Box>
-          <Box width={1}>
-            <Learning courses={learning} color={color} hoverColor={hoverColor}/>
-          </Box>
-        </Flex>
-        </Container>
+      <Provider theme={theme}>
+        <FullHeightSection number={0}>
+          <h1>Tyson Battistella is a web developer</h1>
+        </FullHeightSection>
+        <FullHeightSection number={1}>
+          <Projects projects={work}/>
+        </FullHeightSection>
+        <FullHeightSection number={2}>
+          <h1>Contact</h1>
+          <InlineBox w={1}>
+            <BoxTitle onClick={()=>{window.open('mailto:tysonbattistella@gmail.com')}}>
+              <i className="fa fa-envelope-o"/> Email
+            </BoxTitle>
+          </InlineBox>
+          <InlineBox w={1}>
+            <BoxTitle onClick={()=>{window.open('https://github.com/tysonbattistella', '_blank')}}>
+              <i className="fa fa-github"/> Github
+            </BoxTitle>
+          </InlineBox>
+          <InlineBox w={1}>
+            <BoxTitle onClick={()=>{window.open('https://twitter.com/tbtstl')}}>
+              <i className="fa fa-twitter"/> Twitter
+            </BoxTitle>
+          </InlineBox>
+        </FullHeightSection>
       </Provider>
     );
   }
